@@ -30,10 +30,10 @@ module.exports = {
   plugins: [
     htmlPlugin,
     new ModuleFederationPlugin({
-      name: "MicroFrontend",
+      name: "MicroFrontend", //원격모듈 이름
       filename: "remoteEntry.js",
       exposes: {
-        "./Button": "./src/Button",
+        "./Button": "./src/Button", //내보낼 모듈 설정
       },
     }),
   ],
