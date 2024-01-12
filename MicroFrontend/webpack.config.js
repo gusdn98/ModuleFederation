@@ -34,10 +34,11 @@ module.exports = {
     htmlPlugin,
     //module federation 설정
     new ModuleFederationPlugin({
-      name: "ShellApplication", //호스트의 이름
-      filename: "remoteEntry.js",
+      name: "ShellApplication", //해당 앱의 이름 - 지금은 Host 이름
+      filename: "remoteEntry.js", //다른앱에서 사용하기 위한 정보가 담긴 Manifest 파일의 이름을 지정 - defalt remoteEntry.js
       remotes: {
-        MicroFrontend: "MicroFrontend@http://localhost:3001/remoteEntry.js", //불러올 원격 모듈 주소
+        MicroFrontend: "MicroFrontend@http://localhost:3001/remoteEntry.js",
+        //프레임앱 내부에서 사용하는 별칭 : "불러올 앱의 이름(원격 모듈)@주소:port/Manifest파일"
       },
     }),
   ],
