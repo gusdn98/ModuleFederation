@@ -1,4 +1,6 @@
 # Test
+각각의 폴더에서 npm install
+
 npm start
 
 microfrontend-1 에서 webpack 연습 및 버튼 모듈화
